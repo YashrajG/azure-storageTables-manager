@@ -4,6 +4,10 @@ from sqlalchemy.orm import sessionmaker
 
 from DAO import SampleTable
 
+# Required for setting up azuretables dialect in sqlalchemy
+# from sqlalchemy.dialects import registry
+# registry.register('azuretables', 'dialect')
+
 class tableDMLHelper:
 
     def __init__(self, tableName: str, accountName: str, accountKey: str) -> None:
